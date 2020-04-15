@@ -32,15 +32,28 @@ class CombineViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         view.backgroundColor = UIColor.systemGroupedBackground
         
+        let loading = Loading(frame: view.frame)
+        view.insertSubview(loading, at: 0)
+        
         self.adicionarFooter()
         self.adicionaHeader()
         self.buscaUsuarios()
     }
     
     func buscaUsuarios(){
-        self.usuarios = UsuarioService.shared.buscaUsuarios()
-        self.adiconarCards()
+        //        self.usuarios = UsuarioService.shared.buscaUsuarios()
+        //        self.adiconarCards()
         
+        UsuarioService.shared.buscaUsuarios { (usuarios, err) in
+            
+            if let usuarios = usuarios {
+                
+                DispatchQueue.main.async {
+                    self.usuarios = usuarios
+                    self.adiconarCards()
+                }
+            }
+        }
     }
 }
 
@@ -50,7 +63,7 @@ extension CombineViewController{
     func adiconarCards(){
         
         for usuario in usuarios {
-
+            
             let card = CombineCardView()
             card.frame = CGRect(x: 0, y: 0, width: view.bounds.width - 32, height: view.bounds.height * 0.7)
             card.center = view.center
@@ -62,8 +75,8 @@ extension CombineViewController{
             
             card.addGestureRecognizer(gesture)
             
-            view.insertSubview(card, at: 0)
-                
+            view.insertSubview(card, at: 1)
+            
         }
     }
     
@@ -199,10 +212,10 @@ extension CombineViewController {
                             like = true
                         }
                         
-//                        UIView.animate(withDuration: 0.2){
-//                            card.center = center
-//                            card.transform = CGAffineTransform(rotationAngle: rotationAngle)
-//                        }
+                        //                        UIView.animate(withDuration: 0.2){
+                        //                            card.center = center
+                        //                            card.transform = CGAffineTransform(rotationAngle: rotationAngle)
+                        //                        }
                         
                         UIView.animate(withDuration: 0.2, animations: {
                             card.center = center
