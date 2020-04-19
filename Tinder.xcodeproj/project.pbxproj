@@ -18,6 +18,7 @@
 		DA775BE92415A44B00CD721E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA775BE82415A44B00CD721E /* Assets.xcassets */; };
 		DA775BEC2415A44B00CD721E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA775BEA2415A44B00CD721E /* LaunchScreen.storyboard */; };
 		DA775BF52415A4AB00CD721E /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA775BF42415A4AB00CD721E /* CombineViewController.swift */; };
+		DA7E6894244CD1950076CB89 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E6893244CD1950076CB89 /* MatchViewController.swift */; };
 		DAA5C23C243A57870017E889 /* CombineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5C23B243A57870017E889 /* CombineCardView.swift */; };
 		DAA5C23F243A5B0E0017E889 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5C23E243A5B0E0017E889 /* UIView.swift */; };
 		DAA5C241243A62760017E889 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5C240243A62760017E889 /* UILabel.swift */; };
@@ -38,6 +39,7 @@
 		DA775BEB2415A44B00CD721E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA775BED2415A44B00CD721E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA775BF42415A4AB00CD721E /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
+		DA7E6893244CD1950076CB89 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		DAA5C23B243A57870017E889 /* CombineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCardView.swift; sourceTree = "<group>"; };
 		DAA5C23E243A5B0E0017E889 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../../../../Downloads/UIView.swift; sourceTree = "<group>"; };
 		DAA5C240243A62760017E889 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DA775BF42415A4AB00CD721E /* CombineViewController.swift */,
+				DA7E6893244CD1950076CB89 /* MatchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA074436243D452A009F706E /* UsuarioService.swift in Sources */,
+				DA7E6894244CD1950076CB89 /* MatchViewController.swift in Sources */,
 				DA074433243D43D7009F706E /* Usuario.swift in Sources */,
 				DA775BE42415A44500CD721E /* ViewController.swift in Sources */,
 				DA775BE02415A44500CD721E /* AppDelegate.swift in Sources */,
