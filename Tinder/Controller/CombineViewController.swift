@@ -70,6 +70,9 @@ extension CombineViewController{
             card.usuario = usuario
             card.tag = usuario.id
             
+            card.callback = { (data) in
+                self.visualizarDetalhe(usuario: data)            }
+            
             let gesture = UIPanGestureRecognizer()
             gesture.addTarget(self, action: #selector(handlerCard))
             
@@ -99,6 +102,13 @@ extension CombineViewController{
             self.present(matchVC,animated: true,completion: nil)
             
         }
+    }
+    
+    func visualizarDetalhe(usuario: Usuario) {
+        let detalherVC = DetalheViewController()
+        detalherVC.modalPresentationStyle = .fullScreen
+        
+        self.present(detalherVC, animated: true, completion: nil)
     }
 }
 
