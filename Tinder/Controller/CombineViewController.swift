@@ -106,7 +106,19 @@ extension CombineViewController{
     
     func visualizarDetalhe(usuario: Usuario) {
         let detalherVC = DetalheViewController()
+        
         detalherVC.modalPresentationStyle = .fullScreen
+        detalherVC.usuario = usuario
+        
+        detalherVC.callback = { (usuario, acao) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if acao == .deslike {
+                    self.deslikeClique()
+                } else {
+                    self.likeClique()
+                }
+            }
+        }
         
         self.present(detalherVC, animated: true, completion: nil)
     }
